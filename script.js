@@ -17,5 +17,11 @@ const fRow = document.querySelector("#frow");
 const fColumn = document.querySelector("#fcolumn");
 
 reset.addEventListener('click', () => {
-    prompt(makeGrid());
+    let cells = document.querySelectorAll('.grid-item');
+    cells.forEach(cell => {
+        cell.remove();
+    });
+
+    let x = prompt('Input a number up to 100', '');
+    makeGrid(x, x);
 });
