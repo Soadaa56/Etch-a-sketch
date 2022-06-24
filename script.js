@@ -11,3 +11,11 @@ function makeGrid(rows, cols) {
   };
   
 makeGrid(4, 4);
+
+const reset = document.querySelector("body > div > div.sidebar > button");
+const fRow = document.querySelector("#frow");
+const fColumn = document.querySelector("#fcolumn");
+
+reset.addEventListener('click', () => {
+    prompt(makeGrid());
+});
