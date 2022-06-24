@@ -10,11 +10,9 @@ function makeGrid(rows, cols) {
     };
   };
   
-makeGrid(4, 4);
+makeGrid(4, 4); // default size of grid
 
 const reset = document.querySelector("body > div > div.sidebar > button");
-const fRow = document.querySelector("#frow");
-const fColumn = document.querySelector("#fcolumn");
 
 reset.addEventListener('click', () => {
     let cells = document.querySelectorAll('.grid-item');
@@ -25,3 +23,4 @@ reset.addEventListener('click', () => {
     let x = prompt('Input a number up to 100', '');
     makeGrid(x, x);
 });
+
