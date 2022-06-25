@@ -7,6 +7,7 @@ function makeGrid(rows, cols) {
       let cell = document.createElement("div");
       cell.innerText = '';
       container.appendChild(cell).className = "grid-item";
+      cell.addEventListener('mouseenter', changeColor);
     };
   };
   
@@ -24,8 +25,6 @@ reset.addEventListener('click', () => {
     let x = prompt('Input a number up to 100', '');
     makeGrid(x, x);
 });
-
-cells.forEach(cell => cell.addEventListener('mouseenter', changeColor));
 
 function changeColor(e) {
   console.log(e.target.className); 
