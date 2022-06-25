@@ -41,10 +41,10 @@ h1 {
     border: 1px solid #ddd;
 }
 
-.grid-item-black {
+.item-black {
+    padding: 1px;
+    border: 1px solid #ddd;
     background-color: black;
-
 }
-
 
 
