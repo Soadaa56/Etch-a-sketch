@@ -14,16 +14,17 @@ function makeGrid(rows, cols) {
 makeGrid(4, 4); // default size of grid
 
 const reset = document.querySelector("body > div > div.sidebar > button");
-const cells = document.querySelectorAll('.grid-item');
 
 reset.addEventListener('click', () => {
-  const cells = document.querySelectorAll('.grid-item');
+    const cells = document.querySelectorAll('.grid-item');
     cells.forEach(cell => {
         cell.remove();
     });
 
     let x = prompt('Input a number up to 100', '');
-    makeGrid(x, x);
+    if (x > 100) {
+      alert('no, too big. Try again');
+    } else makeGrid(x, x);
 });
 
 function changeColor(e) {
