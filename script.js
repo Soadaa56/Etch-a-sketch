@@ -12,10 +12,11 @@ function makeGrid(rows, cols) {
   };
   
 makeGrid(4, 4); // default size of grid
+gridSize = 4
 
-const reset = document.querySelector("body > div > div.sidebar > button");
+const changeSize = document.querySelector("#change-size");
 
-reset.addEventListener('click', () => {
+changeSize.addEventListener('click', () => {
     const cells = document.querySelectorAll('.grid-item');
     cells.forEach(cell => {
         cell.remove();
@@ -23,11 +24,25 @@ reset.addEventListener('click', () => {
 
     let x = prompt('Input a number up to 100', '');
     if (x > 100) {
-      alert('no, too big. Try again');
-    } else makeGrid(x, x);
+      alert('Sorry, too big. Try a number below 100')
+    } else {
+      makeGrid(x, x);
+      gridSize = x;
+    }
+});
+
+const reset = document.querySelector(("#reset"));
+
+reset.addEventListener('click', () => {
+  const cells = document.querySelectorAll('.grid-item')
+  cells.forEach(cell => {
+    cell.remove();
+  });
+
+  makeGrid(gridSize, gridSize);
 });
 
 function changeColor(e) {
   console.log(e.target.className); 
   e.target.classList.add('item-black');
-}
+};
