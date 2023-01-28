@@ -10,13 +10,15 @@
 <body>
     <h1>Etch-A-Sketch</h1>
 
-    <div class="content">
-        <div class="sidebar">
-         <button id="change-size">Change Size</button>
-         <button id="reset">Reset</button>
+    <div class="sidebar">
+        <div class="grid-input">
+            <label for="grid-size">Grid Size:</label>
+            <input type="number" min="0" id="grid-size">
+            <button id="change-size">Change Size</button>
         </div>
-        <div id="container">
-        </div>
+        <button id="reset">Reset</button>
+    </div>
+    <div id="container"></div>
     </div>
 </body>
 </html>

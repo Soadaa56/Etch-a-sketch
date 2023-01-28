@@ -1,5 +1,6 @@
 * {
     font-size: 1.1em;
+    background-color:antiquewhite;
 }
 
 h1 {
@@ -12,16 +13,28 @@ h1 {
 }
 
 .content {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto;
 }
 
 .sidebar {
+    position:absolute;
+    top: 40%;
     margin: 20px;
     padding: 10px;
     font-size: 26px;
 }
 
+#change-size {
+    display: block;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
 #container {
+    position: absolute;
+    top: 25%;
+    left: 35%;
     margin: auto;
     width: 600px;
     height: 600px;
@@ -47,4 +60,14 @@ h1 {
     background-color: black;
 }
 
+#grid-size {
+    width: 65px;
+    height: 20px;
+    padding: 5px;
+    margin-right: 20px;
+}
 
+.grid-input{
+    display: flex;
+    flex-direction: row;
+}
