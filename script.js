@@ -20,20 +20,20 @@ makeGrid(4, 4); // default size of grid
 gridSize = 4
 
 const changeSize = document.querySelector("#change-size");
-const sizeInput = document.getElementById('grid-size');
+const inputField = document.getElementById('grid-size');
 
 changeSize.addEventListener('click', () => {
+  let x = inputField.value;
+  if (x == gridSize) {
+    return;
+  } else {
     const cells = document.querySelectorAll('.grid-item');
     cells.forEach(cell => {
         cell.remove();
     });
-
-    gridSize = sizeInput.value
-    if (gridSize > 99) {
-      alert('Sorry, too big. Try a number below 100. Gets too laggy!')
-    } else {
-      makeGrid(gridSize, gridSize);
-    }
+    makeGrid(x, x);
+    gridSize = x;
+  }
 });
 
 const reset = document.querySelector(("#reset"));
