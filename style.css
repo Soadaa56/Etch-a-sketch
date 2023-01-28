@@ -1,5 +1,6 @@
 * {
     font-size: 1.1em;
+    font-family: Arial, sans-serif;
     background-color:antiquewhite;
 }
 
@@ -70,4 +71,12 @@ h1 {
 .grid-input{
     display: flex;
     flex-direction: row;
+}
+
+#change-size {
+    font-size: 22px;
+}
+
+#reset {
+    margin-top: 50px;
 }
