@@ -72,6 +72,7 @@ h1 {
 button:hover {
     transform: scale(1.1);
     border-color: rgba(0, 128, 128, 0.5);
+    box-shadow: 0 0 10px 3px teal;
 }
 
 .grid-input{
