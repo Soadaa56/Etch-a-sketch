@@ -22,8 +22,8 @@ h1 {
 .sidebar {
     position:absolute;
     top: 40%;
-    margin: 20px;
-    padding: 10px;
+    margin-left: 10px;
+    padding: 5px;
     font-size: 26px;
 }
 
@@ -62,7 +62,33 @@ h1 {
     background-color: black;
 }
 
-#grid-size {
+.item-red {
+    padding: 1px;
+    border: 1px solid #ddd;
+    background-color: red;
+}
+
+.item-blue {
+    padding: 1px;
+    border: 1px solid #ddd;
+    background-color: blue
+}
+
+.item-green {
+    padding: 1px;
+    border: 1px solid #ddd;
+    background-color: green
+}
+
+.item-purple {
+    padding: 1px;
+    border: 1px solid #ddd;
+    background-color: purple
+}
+
+#grid-size-input {
+    font-size: 20px;
+    text-align: center;
     width: 65px;
     height: 20px;
     padding: 5px;
@@ -85,5 +111,10 @@ button:hover {
 }
 
 #reset {
-    margin-top: 50px;
+    margin-top: 100px;
+}
+
+#colors {
+    margin-top: 20px;
+    font-size: 24px;
 }

@@ -19,7 +19,7 @@ function makeGrid(rows, columns) {
 };
 
 const changeSize = document.querySelector("#change-size");
-const inputField = document.getElementById('grid-size');
+const inputField = document.getElementById('grid-size-input');
 
 // Change size button
 
@@ -53,8 +53,28 @@ reset.addEventListener('click', () => {
 // Color
 
 function changeColor(e) {
-  e.target.classList.add('item-black');
-};
+  let colors = document.querySelector("#colors").value
+  switch (colors) {
+    case 'item-black':
+      e.target.classList.add('item-black');
+      break;
+    case 'item-red':
+      e.target.classList.add('item-red');
+      break;
+    case 'item-blue':
+      e.target.classList.add('item-blue');
+      break;
+    case 'item-green':
+      e.target.classList.add('item-green');
+      break;
+    case 'item-purple':
+      e.target.classList.add('item-purple');
+      break;
+    default:
+      console.log("bug in function changeColor switch statement")
+      break;
+  }
+}
 
 // Driver code
 

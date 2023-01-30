@@ -13,8 +13,18 @@
     <div class="sidebar">
         <div class="grid-input">
             <label for="grid-size">Grid Size:</label>
-            <input type="number" min="0" id="grid-size">
+            <input type="number" value="4" min="0" id="grid-size-input">
             <button id="change-size">Change Size</button>
+        </div>
+        <div class="color-input">
+            <label for="color-choice">Color:</label>
+            <select id="colors" name="colors">
+                <option value="item-black">Black</option>
+                <option value="item-red">Red</option>
+                <option value="item-blue">Blue</option>
+                <option value="item-green">Green</option>
+                <option value="item-purple">Purple</option>
+            </select>
         </div>
         <button id="reset">Reset</button>
     </div>
