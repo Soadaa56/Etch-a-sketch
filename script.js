@@ -1,5 +1,7 @@
 const container = document.getElementById('container');
 
+// Makes a grid of squares without color
+
 function makeGrid(rows, columns) {
     if (rows < 0) {
         rows = 1;
@@ -15,12 +17,11 @@ function makeGrid(rows, columns) {
       cell.addEventListener('mouseenter', changeColor);
     };
 };
-  
-makeGrid(4, 4); // default size of grid
-gridSize = 4
 
 const changeSize = document.querySelector("#change-size");
 const inputField = document.getElementById('grid-size');
+
+// Change size button
 
 changeSize.addEventListener('click', () => {
   let x = inputField.value;
@@ -38,6 +39,8 @@ changeSize.addEventListener('click', () => {
 
 const reset = document.querySelector(("#reset"));
 
+// Reset button
+
 reset.addEventListener('click', () => {
   const cells = document.querySelectorAll('.grid-item')
   cells.forEach(cell => {
@@ -47,6 +50,13 @@ reset.addEventListener('click', () => {
   makeGrid(gridSize, gridSize);
 });
 
+// Color
+
 function changeColor(e) {
   e.target.classList.add('item-black');
 };
+
+// Driver code
+
+makeGrid(4, 4); // default size of grid
+gridSize = 4
